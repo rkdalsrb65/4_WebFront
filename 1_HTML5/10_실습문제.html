@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_실습문제</title>
+</head>
+<body>
+    <h1>실습문제</h1>
+
+    고객명 : <input type="name"> <br> <br>
+    전화번호: <input type="tel"> <br> <br>
+    E-mail : <input type="email"> <br> <br>
+
+    피자선택 : <select name="pizza">
+
+    <option value="a">피자를 선택하세요</option>
+    <option value="b">초코맛 피자</option>
+    <option value="c">딸기맛 피자</option>
+    <option value="d">키위맛 피자</option>
+    </select>
+
+    <fieldset>
+        <legend>피자 사이즈</legend>
+        <input type="radio"> Small <br> <br>
+        <input type="radio"> Medium <br> <br>
+        <input type="radio"> Large <br> <br>
+    </fieldset>
+
+    <fieldset>
+        <legend>토핑 선택</legend>
+        <input type="checkbox"> 베이컨 <br> <br>
+        <input type="checkbox"> 치즈 <br> <br>
+        <input type="checkbox"> 양파 <br> <br>
+        <input type="checkbox"> 버섯 <br> <br>
+    </fieldset>
+
+    <br>
+
+    희망배송시간 : <input type="time"> <br> <br>
+
+    배송시 요청사항 : <textarea></textarea> <br> <br>
+
+    <button>주문하기</button>
+
+<br>
+<br>
+<hr>
+<hr>
+<hr>
+<br>
+<fieldset>
+    <legend>납품자 정보</legend>
+    <ol type="1">
+    <li> 납품자명 : <input> </li> <br>
+    <li> email : <input type="email" placeholder="answer@naver.com"> </li> <br>
+    <li> 홈페이지 : <input type="url" value="http://"> </li> <br>
+    <li> 지역 : <select><option value="a">부산</option>
+    <option value="a">서울</option></select> </li> <br>
+    </ol>
+</fieldset>
+
+<fieldset>
+    <legend>납품 정보</legend>
+    <ul>
+    <li> 상품명 : <input> </li> <br>
+    <li> 납품수량 : <input placeholder="최소 100"> </li> <br>
+    <li> 납품등급 : <input id="range1" type="range" min="0" max="100" step="10"><span id="result">50</span> </li> <br>
+    <li> 기타사항 : <textarea></textarea> </li> <br> 
+    </ul>
+</fieldset>
+<br> <button>send message</button>
+<br>
+<br>
+<hr>
+<hr>
+<hr>
+<br>
+
+<fieldset>
+    <legend>필수 입력 사항</legend>
+    <table>
+    <th> ID <input placeholder="아이디 10글자 이내"> <button>중복확인</button> <br>
+    비밀번호 <input type="password" name="inputPw" 
+    placeholder="영문,숫자,특수문자 포함 8자 이상"><br>
+    비밀번호확인 <input type="password" name="inputPw"><br>
+    Email<input><select><option value="a">직접입력</option>
+        <option value="a">naver.com</option></select></th><br>
+</table>
+</fieldset>
+
+<fieldset>
+    <legend>추가 정보</legend>
+
+    프로필 사진 <button>파일 선택</button>선택된 파일 없음 <br> <br>
+
+    성별 : <input type="radio" id="male" name="gender" value="M">
+    <label for="male">남자</label>
+    <input type="radio" id="female" name="gender" value="F">
+    <label for="female">여자</label> <br> <br>
+    생년월일 : <input type="date"> <br> <br>
+
+    취미 <br>
+    <input type="checkbox" name="hobby"> 야구
+    <input type="checkbox" name="hobby"> 농구
+    <input type="checkbox" name="hobby"> 축구 <br>
+    <input type="checkbox" name="hobby"> 공부
+    <input type="checkbox" name="hobby"> 음악감상 <br>
+    <input type="checkbox" name="hobby"> 기타 <br> <br>
+
+    자기소개 <br>
+    <textarea rows="10" cols="70"style="resize:none"></textarea><br> <br>
+</fieldset>
+
+<br>
+<button>회원가입</button><button>다시입력</button><button>이전으로</button>
+</body>
+</html>

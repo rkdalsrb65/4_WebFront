@@ -101,7 +101,7 @@ input[name='fruits']:checked{
 .chk + label{
     width: 30px;
     height: 30px;
-    border : 1px solid black;
+    border : 1px solid #ccc;
 
     /* label은 기본적으로 inline형식 -> 크기 조정 X
         그래서 형식 변경을 진행
@@ -127,3 +127,5 @@ input[name='fruits']:checked{
 .chk{
     display: none;
 }
+
+.test-4{font-size: 28px;}

@@ -1,0 +1,45 @@
+div{
+    border : 1px solid black;
+    box-sizing: border-box; /* w/h가 padding + border + content의 합
+                                    -> content가 자동 조정됨 */
+}
+
+.test{
+    width: 300px;
+    height: 200px;
+    background-color: #ddd;
+}
+
+/* float : left */
+.left{
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+
+    float : left;
+}
+
+.clear{
+    /* clear : left; */
+    /* float : left 상태를 해제 */
+
+    /* clear : right; */
+    /* float : right 상태를 해제 */
+
+    clear : both; /* 양쪽 */
+    /* float : left/right 상태를 동시에 해제 */
+
+    background-color: red;
+    color : white;
+}
+
+.right{
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+
+    float : right;
+    /* 요소를 띄워서 오른쪽 정렬
+        (중요) HTML에 먼저 작성된 요소를 먼저 정렬 시킨다
+    */
+}

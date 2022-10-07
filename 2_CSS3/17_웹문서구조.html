@@ -83,7 +83,39 @@
 
         <section class="content">
             <section class="content-1"></section>
-            <section class="content-2"></section>
+            <section class="content-2">
+
+                <form action="#" name="login-frm">
+        
+                    <!-- 아이디, 비밀번호, 로그인 버튼 -->
+                    <fieldset id="id-pw-area">
+                        <section>
+                            <input type="text" name="inputId" placeholder="아이디" autocomplete="off">
+                            <!-- autocomplete="off" == 자동완성 사용 X -->
+                            <input type="password" name="inputPw" placeholder="비밀번호">
+                        </section>
+        
+                        <section>
+                            <!-- type="submit"이 기본값 -->
+                            <button>로그인</button>
+                        </section>
+                    </fieldset>
+        
+                    <!-- label 태그 내부에 input태그를 작성하면 자동 연결됨 -->
+                    <label>
+                        <input type="checkbox" name="saveId"> 아이디 저장
+                    </label>
+        
+                    <!-- 회원가입/ ID/PW 찾기 -->
+                    <article id="signUp-find-area">
+                        <a href="#">회원가입</a>
+                        <span>|</span>
+                        <a href="#">ID/PW찾기</a>
+                    </article>
+        
+                </form>
+        
+            </section>
         </section>
     </main>
 

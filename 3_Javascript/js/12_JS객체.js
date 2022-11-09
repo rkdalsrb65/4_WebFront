@@ -82,3 +82,81 @@ document.getElementById("btn1").addEventListener("click", function(){
         div1.innerHTML += product[key] + "<br>"
     }
 });
+
+
+
+// 생성자 함수
+document.getElementById("btn2").addEventListener("click", function(){
+
+    const div2 = document.getElementById("div2");
+
+    const stdList = []; // 비어있는 배열
+
+    // 2. 생성자 함수 호출 : new 생성자함수명(매개변수)
+    stdList.push(new Student(1, 2, "홍길동"));
+    stdList.push(new Student(3, 10, "김길동"));
+    stdList.push(new Student(2, 5, "서도은"));
+    stdList.push(new Student(4, 7, "박철수"));
+
+    div2.innerHTML = ""; // 이전 내용 삭제
+
+    // for of : 배열/컬렉션 요소 반복 접근용 for문
+    for(let std of stdList){
+
+        // for in : 객체의 키 반복 접근용 for문
+        for(let key in std){
+
+            // std[key]에 자료형이 'function'이면 실행 후 출력
+            if(typeof std[key] == 'function') {
+            div2.innerHTML += key + " : " + std[key]() +"<br>";
+
+        } else{
+            div2.innerHTML += key + " : " + std[key] +"<br>";
+        }
+    }
+        div2.innerHTML += "<hr>";
+    
+}
+
+    // console.log(stdList);
+
+});
+
+// 1. 생성자 함수 정의 : 생성자 함수의 시작은 반드시 대문자!
+function Student(grade, ban, name){
+    // JS 함수의 매개변수는 let,const,var를 적지 않음!
+    // -> 안 적어도 해당 함수의 지역변수로 취급
+
+    // 생성자 함수에서의 this
+    // == new 연산자를 통해 만들어지는 객체(앞으로 만들어질 객체)
+
+    // 속성
+    this.grade = grade;
+    // 매개변수 grade 값을 생성되는 객체의 grade에 대입
+    this.ban = ban;
+    this.name = name;
+
+    // 기능
+    this.introduce = function(){
+        return this.grade + "학년" + this.ban + "반" + this.name;
+    }
+}
+
+// JSON
+document.getElementById("btn3").addEventListener("click", function(){
+
+    // JSON.stringify(JS객체) : JS객체 -> JSON문자열 변환
+    // JSON.parse(JSON문자열) : JSON문자열 -> JS 객체 변환
+
+    const std = new Student(5, 7, "오칠이");
+
+    console.log(std); // 객체
+    console.log(JSON.stringify(std)); // 객체 -> JSON 변환
+    // ** JSON 변환 시 객체의 기능은 포함하지 않는다!!! **
+    // -> JSON은 데이터 전달에 특화된 형태
+
+    const member = '{"memberId":"user01","memberPw":"pass01","age":20}';
+
+    console.log(member); // JSON 문자열
+    console.log(JSON.parse(member)); // JSON -> 객체
+})
